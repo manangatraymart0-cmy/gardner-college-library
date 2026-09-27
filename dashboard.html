@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Dashboard - BOOKLIB</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+<div class="dashboard">
+
+
+    <!-- SIDEBAR -->
+
+    <div class="sidebar">
+
+        <div class="brand">
+
+            <div class="small-logo">
+                B
+            </div>
+
+            <div>
+                <h2>BOOKLIB</h2>
+                <p>Library System</p>
+            </div>
+
+        </div>
+
+
+        <div class="navigation">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-link active">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="borrow.html" class="nav-link">
+                Borrow Books
+            </a>
+
+            <a href="borrowed.html" class="nav-link">
+                My Borrowed Books
+            </a>
+
+            <a href="history.html" class="nav-link">
+                Borrowing History
+            </a>
+
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="profile.html" class="nav-link">
+                My Profile
+            </a>
+
+            <p class="nav-title admin-only">ADMIN</p>
+
+            <a href="students.html" class="nav-link admin-only">
+                Registered Students
+            </a>
+
+        </div>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="index.html" class="logout" onclick="logout(); return false;">
+                Log Out
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- MAIN CONTENT -->
+
+    <div class="content">
+
+
+        <!-- HEADER -->
+
+        <div class="top">
+
+            <div>
+
+                <h1>Dashboard</h1>
+
+                <p>
+                    Welcome back! Here's what's happening in the library.
+                </p>
+
+            </div>
+
+
+            <div class="profile">
+
+                <div class="profile-picture">
+                    GC
+                </div>
+
+                <div>
+
+                    <strong>Gen Macken Canaria</strong>
+
+                    <p>Student</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- STATISTICS -->
+
+        <div class="statistics">
+
+
+            <div class="stat-card">
+
+                <p>Total Books</p>
+
+                <h2>--</h2>
+
+                <span>Books in library</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Available Books</p>
+
+                <h2>--</h2>
+
+                <span>Ready to borrow</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>My Borrowed Books</p>
+
+                <h2>--</h2>
+
+                <span>Currently borrowed</span>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <p>Due Soon</p>
+
+                <h2>--</h2>
+
+                <span>Needs attention</span>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- SEARCH -->
+
+        <div class="search-area">
+
+            <div>
+
+                <h2>Find a Book</h2>
+
+                <p>
+                    Search for books available in the library.
+                </p>
+
+            </div>
+
+
+            <div class="search">
+
+                <input
+                    type="text"
+                    placeholder="Search by title or author"
+                >
+
+                <button>
+                    Search
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- AVAILABLE BOOKS -->
+
+        <div class="section">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Available Books</h2>
+
+                    <p>
+                        Books you can borrow right now
+                    </p>
+
+                </div>
+
+
+                <a href="#">
+                    View All Books
+                </a>
+
+            </div>
+
+
+
+            <div class="book-list">
+
+
+                <div class="book-card">
+
+                    <div class="book-image">
+                        BOOK
+                    </div>
+
+                    <h3>
+                        
+                    </h3>
+
+                    <p>
+                        
+                    </p>
+
+                    <div class="book-footer">
+
+                        <span class="available">
+                            Available
+                        </span>
+
+                        <button>
+                            Borrow
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="book-card">
+
+                    <div class="book-image">
+                        BOOK
+                    </div>
+
+                    <h3>
+                        
+                    </h3>
+
+                    <p>
+                        
+                    </p>
+
+                    <div class="book-footer">
+
+                        <span class="available">
+                            Available
+                        </span>
+
+                        <button>
+                            Borrow
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="book-card">
+
+                    <div class="book-image">
+                        BOOK
+                    </div>
+
+                    <h3>
+                        
+                    </h3>
+
+                    <p>
+                        
+                    </p>
+
+                    <div class="book-footer">
+
+                        <span class="available">
+                            Available
+                        </span>
+
+                        <button>
+                            Borrow
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="book-card">
+
+                    <div class="book-image">
+                        BOOK
+                    </div>
+
+                    <h3>
+                        
+                    </h3>
+
+                    <p>
+                        
+                    </p>
+
+                    <div class="book-footer">
+
+                        <span class="borrowed">
+                            Borrowed
+                        </span>
+
+                        <button disabled>
+                            Unavailable
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+
+        <!-- RECENT BORROWING -->
+
+        <div class="section recent">
+
+
+            <div class="section-header">
+
+                <div>
+
+                    <h2>Recent Borrowing</h2>
+
+                    <p>
+                        Your latest book transactions
+                    </p>
+
+                </div>
+
+                <a href="#">
+                    View History
+                </a>
+
+            </div>
+
+
+
+            <table>
+
+                <tr>
+
+                    <th>Book Title</th>
+
+                    <th>Date Borrowed</th>
+
+                    <th>Due Date</th>
+
+                    <th>Status</th>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Book
+                    </td>
+
+                    <td>
+                        September 15, 2026
+                    </td>
+
+                    <td>
+                        September 22, 2026
+                    </td>
+
+                    <td>
+
+                        <span class="status-borrowed">
+                            Borrowed
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+                <tr>
+
+                    <td>
+                        Book
+                    </td>
+
+                    <td>
+                        September 10, 2026
+                    </td>
+
+                    <td>
+                        September 17, 2026
+                    </td>
+
+                    <td>
+
+                        <span class="status-due">
+                            Due Soon
+                        </span>
+
+                    </td>
+
+                </tr>
+
+
+            </table>
+
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+
+</html>

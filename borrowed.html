@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Borrowed Books - BOOKLIB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="brand">
+            <div class="small-logo">B</div>
+
+            <div>
+                <h2>BOOKLIB</h2>
+                <p>Library System</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-link">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="borrow.html" class="nav-link">
+                Borrow Books
+            </a>
+
+            <a href="borrowed.html" class="nav-link active">
+                My Borrowed Books
+            </a>
+
+            <a href="history.html" class="nav-link">
+                Borrowing History
+            </a>
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="profile.html" class="nav-link">
+                My Profile
+            </a>
+
+            <p class="nav-title admin-only">ADMIN</p>
+
+            <a href="students.html" class="nav-link admin-only">
+                Registered Students
+            </a>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout" onclick="logout(); return false;">
+                Log Out
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="top">
+
+            <div>
+                <h1>My Borrowed Books</h1>
+                <p>View and manage the books you currently borrowed.</p>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-picture">
+                    GC
+                </div>
+
+                <div>
+                    <strong>Gen Macken Canaria</strong>
+                    <p>Student</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUMMARY CARDS -->
+        <div class="borrow-summary">
+
+            <div class="summary-card">
+                <div class="summary-icon">📚</div>
+                <div>
+                    <h3>0</h3>
+                    <p>Currently Borrowed</p>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">📅</div>
+                <div>
+                    <h3>0</h3>
+                    <p>Due Soon</p>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <div class="summary-icon">✓</div>
+                <div>
+                    <h3>0</h3>
+                    <p>Returned Books</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- BORROWED BOOKS -->
+        <div class="borrowed-container">
+
+            <div class="section-header">
+                <div>
+                    <h2>Currently Borrowed</h2>
+                    <p>Your borrowed books will appear here.</p>
+                </div>
+            </div>
+
+            <div class="empty-borrowed">
+
+                <div class="empty-icon">
+                    📖
+                </div>
+
+                <h2>No Borrowed Books</h2>
+
+                <p>
+                    You currently don't have any borrowed books.
+                </p>
+
+                <a href="borrow.html" class="borrow-button">
+                    Browse Books
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Books - BOOKLIB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="brand">
+            <div class="small-logo">B</div>
+
+            <div>
+                <h2>BOOKLIB</h2>
+                <p>Library System</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-link">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link active">
+                Books
+            </a>
+
+            <a href="borrow.html" class="nav-link">
+                Borrow Books
+            </a>
+
+            <a href="borrowed.html" class="nav-link">
+                My Borrowed Books
+            </a>
+
+            <a href="history.html" class="nav-link">
+                Borrowing History
+            </a>
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="profile.html" class="nav-link">
+                My Profile
+            </a>
+
+            <p class="nav-title admin-only">ADMIN</p>
+
+            <a href="students.html" class="nav-link admin-only">
+                Registered Students
+            </a>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout" onclick="logout(); return false;">
+                Log Out
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="top">
+
+            <div>
+                <h1>Books</h1>
+                <p>Browse the books available in the library.</p>
+            </div>
+
+            <div class="profile">
+                <div class="profile-picture">GC</div>
+
+                <div>
+                    <strong>Gen Macken Canaria</strong>
+                    <p>Student</p>
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- SEARCH -->
+        <div class="search-area">
+
+            <div>
+                <h2>Find a Book</h2>
+                <p>Search for a book by title or author.</p>
+            </div>
+
+            <div class="search">
+                <input
+                    type="text"
+                    placeholder="Search by title or author"
+                >
+
+                <button>Search</button>
+            </div>
+
+        </div>
+
+
+        <!-- BOOK INFORMATION -->
+        <div class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Library Books</h2>
+                    <p>Book information will be added after consultation with the librarian.</p>
+                </div>
+
+            </div>
+
+
+            <!-- BOOK TABLE -->
+            <div class="book-table-container">
+
+                <table class="book-table">
+
+                    <tr>
+                        <th>Book ID</th>
+                        <th>Book Title</th>
+                        <th>Author</th>
+                        <th>Category</th>
+                        <th>Available Copies</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+
+                    <!-- BOOK 1 -->
+                    <tr>
+                        <td>---</td>
+                        <td>Book Title</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+
+                        <td>
+                            <span class="available">
+                                Available
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="borrow-button">
+                                Borrow
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <!-- BOOK 2 -->
+                    <tr>
+                        <td>---</td>
+                        <td>Book Title</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+
+                        <td>
+                            <span class="available">
+                                Available
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="borrow-button">
+                                Borrow
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <!-- BOOK 3 -->
+                    <tr>
+                        <td>---</td>
+                        <td>Book Title</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+
+                        <td>
+                            <span class="borrowed">
+                                Borrowed
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="borrow-button" disabled>
+                                Unavailable
+                            </button>
+                        </td>
+                    </tr>
+
+
+                    <!-- BOOK 4 -->
+                    <tr>
+                        <td>---</td>
+                        <td>Book Title</td>
+                        <td>---</td>
+                        <td>---</td>
+                        <td>---</td>
+
+                        <td>
+                            <span class="available">
+                                Available
+                            </span>
+                        </td>
+
+                        <td>
+                            <button class="borrow-button">
+                                Borrow
+                            </button>
+                        </td>
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+
+        <!-- INFORMATION NOTE -->
+        <div class="book-note">
+
+            <h3>Library Information</h3>
+
+            <p>
+                Book information will be updated based on the official
+                records provided by the school librarian.
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="auth.js"></script>
+
+</body>
+</html>

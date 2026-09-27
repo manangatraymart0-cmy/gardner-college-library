@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registered Students - BOOKLIB</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+        <div class="brand">
+            <div class="small-logo">B</div>
+
+            <div>
+                <h2>BOOKLIB</h2>
+                <p>Library System</p>
+            </div>
+        </div>
+
+        <div class="navigation">
+
+            <p class="nav-title">MAIN MENU</p>
+
+            <a href="dashboard.html" class="nav-link">
+                Dashboard
+            </a>
+
+            <a href="books.html" class="nav-link">
+                Books
+            </a>
+
+            <a href="borrow.html" class="nav-link">
+                Borrow Books
+            </a>
+
+            <a href="borrowed.html" class="nav-link">
+                My Borrowed Books
+            </a>
+
+            <a href="history.html" class="nav-link">
+                Borrowing History
+            </a>
+
+            <p class="nav-title">ACCOUNT</p>
+
+            <a href="#" class="nav-link">
+                My Profile
+            </a>
+
+            <p class="nav-title admin-only">ADMIN</p>
+
+            <a href="students.html" class="nav-link admin-only active">
+                Registered Students
+            </a>
+
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="index.html" class="logout" onclick="logout(); return false;">
+                Log Out
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- MAIN CONTENT -->
+    <div class="content">
+
+        <!-- HEADER -->
+        <div class="top">
+
+            <div>
+                <h1>Registered Students</h1>
+                <p>Every student account created through the registration form.</p>
+            </div>
+
+            <div class="profile">
+
+                <div class="profile-picture">
+                    A
+                </div>
+
+                <div>
+                    <strong>Administrator</strong>
+                    <p>Admin</p>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- STUDENT TABLE -->
+        <div class="section">
+
+            <div class="section-header">
+
+                <div>
+                    <h2>Student Accounts</h2>
+                    <p>Full name, student ID, and username for each registered account.</p>
+                </div>
+
+            </div>
+
+
+            <div class="book-table-container">
+
+                <table class="book-table">
+
+                    <tr>
+                        <th>Full Name</th>
+                        <th>Student ID</th>
+                        <th>Username</th>
+                    </tr>
+
+                    <tbody id="studentList"></tbody>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    var PAGE_REQUIRES_ADMIN = true;
+</script>
+<script src="auth.js"></script>
+
+<script>
+
+    var studentList =
+        document.getElementById("studentList");
+
+    var foundStudents = false;
+
+
+    for (var i = 0; i < localStorage.length; i++) {
+
+        var key =
+            localStorage.key(i);
+
+
+        if (key.indexOf("user_") === 0) {
+
+            var account =
+                JSON.parse(localStorage.getItem(key));
+
+
+            /* Only list student accounts, not the admin session */
+
+            if (account.role === "admin") {
+                continue;
+            }
+
+
+            var row =
+                document.createElement("tr");
+
+
+            row.innerHTML =
+
+                "<td>" + account.fullname + "</td>" +
+
+                "<td>" + account.studentid + "</td>" +
+
+                "<td>" + account.username + "</td>";
+
+
+            studentList.appendChild(row);
+
+            foundStudents = true;
+
+        }
+
+    }
+
+
+    if (!foundStudents) {
+
+        studentList.innerHTML =
+            "<tr><td colspan='3'>No students have registered yet.</td></tr>";
+
+    }
+
+</script>
+
+</body>
+</html>
